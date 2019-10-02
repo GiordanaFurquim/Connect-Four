@@ -45,9 +45,6 @@ console.log("unicorns are here");
         switchPlayers();
     });
 
-    // RESETS THE GAME
-
-
     // DEFINES WHEN TO SWITCH A PLAYER
 
     function switchPlayers() {
