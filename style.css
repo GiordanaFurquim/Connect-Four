@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@keyframes color {
+    0% {
+        background: #e9b4da;
+    }
+
+    100% {
+        background: #dae9b4;
+    }
+}
+
+body {
+    background: #e9b4da;
+    /*animation: color 5s linear infinite alternate both;*/
+}
+h1 {
+    font-size: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #50a3b4;
+    margin-top: 3%;
+    animation: 3s winner;
+    border: dotted 6px #dae9b4;
+    font-family: "Monoton", cursive;
+    letter-spacing: 10px;
+    word-spacing: 15px;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #50a3b4;
+    margin-top: 3%;
+    animation: 3s winner;
+    border: dotted 6px #dae9b4;
+    font-family: "Monoton", cursive;
+    letter-spacing: 10px;
+}
+
+#board {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin-top: 5%;
+}
+
+.slot {
+    width: 100px;
+    heigth: 100px;
+    background-color: #e9b4da;
+    padding: 10px;
+}
+
+.hole {
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    background-color: #f2e1ed;
+    position: relative;
+    right: 5px;
+    border: solid 6px #6fbccf;
+    animation: color 2s linear infinite alternate both;
+}
+
+.player1 .hole {
+    background-image: url(cher.jpg);
+    background-size: contain;
+    animation: pop-in 1.1s both;
+}
+
+.player2 .hole {
+    background-image: url(madonna.jpg);
+    background-size: contain;
+    animation: pop-in 1.1s both;
+}
+#modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(236, 127, 227, 0.35);
+}
+
+#modal-wrapper.on {
+    visibility: visible;
+}
+
+#dialog-container {
+    background-color: rgba(180, 218, 233, 0.85);
+    height: 300px;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 30%;
+}
+
+@keyframes winner {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pop-in {
+    0% {
+        transform: translateY(-500px);
+
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    38% {
+        transform: translateY(0);
+
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    55% {
+        transform: translateY(-65px);
+
+        animation-timing-function: ease-in;
+    }
+    72% {
+        transform: translateY(0);
+
+        animation-timing-function: ease-out;
+    }
+    81% {
+        transform: translateY(-28px);
+
+        animation-timing-function: ease-in;
+    }
+    90% {
+        transform: translateY(0);
+
+        animation-timing-function: ease-out;
+    }
+    95% {
+        transform: translateY(-8px);
+
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: translateY(0);
+
+        animation-timing-function: ease-out;
+    }
+}
+
+
+#dialog-button {
+    color: black;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+}
+
+#alert p {
+    color: #5fa1b1;
+    font-family: "Monoton", cursive;
+    margin-left: 25%;
+    font-size: 70px;
+    word-spacing: 20px;
+    margin-top: 5%;
+}
