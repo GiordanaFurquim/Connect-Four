@@ -10,7 +10,7 @@ In this game players take turns dropping their pieces into one of seven columns 
 - After there is a victory, the game restarts and it is possible to play again. 
 <img width="946" alt="popup" src="https://user-images.githubusercontent.com/50359290/66087114-99c16200-e576-11e9-8536-4b4bab649bd9.png">
 
-#Stack
+# Stack
 - Javascript/jQuery
 - HTML
 - CSS
